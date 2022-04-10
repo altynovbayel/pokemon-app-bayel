@@ -1,0 +1,228 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  color: inherit;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+  font-family: 'Koho', sans-serif;
+  background: url('http://adwallpapers.xyz/uploads/posts/147104-pokemon-4k-ultra-hd-wallpaper.jpg') center / cover no-repeat;
+  height: 100vh;
+  background-attachment: fixed;
+}
+.container{
+  width: 85%;
+  margin: 0 auto;
+}
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2em;
+  gap: 20px;
+}
+
+.card{
+  background-color: rgb(250, 250, 250);
+  border: 1px solid gold;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0 0 5px rgba(255, 217, 0, 0.6);
+  padding: 1em;
+  font-size: 20px;
+}
+
+.card:hover{
+  background-color: rgb(230, 230, 230);
+}
+
+.single{
+  min-width: 70%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 5px gold;
+}
+.single_wrapper{
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-around;
+  border-bottom: 1px solid gold;
+}
+.single_wrapper img{
+  width: 400px;
+  height: 400px;
+}
+.single_wrapper ul li{
+  font-size: 20px;
+  margin: 10px 0;
+}
+.single_wrapper ul li span{
+  font-weight: 600;
+  text-shadow: 0 0 2pt gold;
+}
+
+.back{
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: gold;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  padding: 12px 16px;
+  transition: .3s;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.back:hover{
+  background-color: rgb(187, 163, 29);
+}
+
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons.active{
+  display: none;
+}
+
+.next, .prev, .goPage{
+  border: none;
+  outline: none;
+  background: none;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: .3s;
+  padding: 12px 16px;
+}
+.page{
+  margin: 0 10px;
+}
+.next{
+  background-color: green;
+}
+
+.next:hover{
+  background-color: lightgreen;
+}
+
+.prev{
+  background-color: red;
+}
+
+.prev:hover{
+  background-color: lightsalmon;
+}
+
+.next:disabled, .prev:disabled{
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+}
+
+.selectPage{
+  margin: 30px 0;
+  padding: 0 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.pageInput{
+  padding: 12px 16px;
+  width: 400px;
+  border-radius: 10px;
+  background: none;
+  box-shadow: 2px 2px 2px #333;
+  border: 1px solid #333;
+  outline: none;
+}
+.goPage{
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.inputSelect{
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.stats{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.stats  h3{
+  margin: 0 10px;
+  width: 22%;
+}
+.stat_inner{
+  width: 80%;
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px 5px;
+  overflow: hidden;
+
+}
+.stat{
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+}
+.hp{
+  background-color: green;
+}
+.attack{
+  background-color: rgb(177, 53, 53);
+}
+.def{
+  background-color: rgb(233, 233, 48);
+}
+.specAttack{
+  background-color: red;
+}
+.specDef{
+  background-color: yellow;
+}
+.speed{
+  background-color: blue;
+}
+
+
+@media (max-width:1150px) {
+  .single{
+    width: 90%;
+  }
+  .single_wrapper img{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width:430px) {
+  .container{
+    width: 95%;
+  }
+  .pageInput{
+    width: 150px;
+  }
+}
